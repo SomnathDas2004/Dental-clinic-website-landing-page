@@ -631,12 +631,20 @@
   color: #57c27c;
 }
 
-/* Responsive Tweaks – Do not change existing styles, just enhance for responsiveness */
-/* RESPONSIVE STYLES */
+/* MEDIA QUERIES */
 
-@media (max-width: 1024px) {
+/* Phone screens (up to 600px) */
+@media (max-width: 600px) {
   .navbar {
-    padding: 20px 5%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
   }
 
   .hero-content {
@@ -645,12 +653,15 @@
   }
 
   .hero-image img {
-    margin-right: 0;
+    margin: 0 auto;
   }
 
-  .about-section {
+  .about-section,
+  .container,
+  .consultation-container {
     flex-direction: column;
-    padding: 0 20px;
+    align-items: center;
+    padding: 20px;
   }
 
   .image-container {
@@ -658,118 +669,89 @@
     text-align: center;
   }
 
+  .text-section,
   .content-container {
-    padding: 20px;
-    width: 100%;
-  }
-
-  .container {
-    flex-direction: column;
-    padding: 40px 20px;
-  }
-
-  .image-section {
-    width: 100%;
     text-align: center;
-  }
-
-  .image-section img {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .consultation-container {
-    flex-direction: column;
-  }
-
-  .consultation-image,
-  .consultation-form {
-    width: 100%;
   }
 
   .form-row {
     flex-direction: column;
   }
-
-  .fifth-box {
-    margin-left: 0;
-    padding: 40px 20px;
-  }
 }
 
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
+/* Tablet screens (601px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .navbar {
+    padding: 15px 5%;
   }
 
-  .contact-button a {
-    margin-left: 0;
-    justify-content: center;
+  .nav-links {
+    gap: 20px;
   }
 
   .hero-text h1 {
     font-size: 2rem;
   }
 
-  .heading {
-    font-size: 24px;
+  .feature-card h3 {
+    font-size: 1rem;
   }
 
-  .text-section h2 {
-    font-size: 24px;
+  .about-section,
+  .container,
+  .consultation-container {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .fifth-box p {
-    font-size: 16px;
+  .image-container,
+  .image-section {
+    text-align: center;
   }
 
-  .consultation-form {
-    padding: 30px 20px;
-  }
-
-  .arrow-fifth {
-    padding: 0 10px;
+  .form-row {
+    flex-direction: column;
   }
 }
 
-@media (max-width: 480px) {
-  .logo {
-    font-size: 1.2rem;
-  }
-
-  .book-btn {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-
-  .learn-more-btn {
-    padding: 10px 18px;
-    font-size: 14px;
+/* Laptop screens (901px to 1200px) */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .navbar {
+    padding: 20px 6%;
   }
 
   .hero-text h1 {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
   }
 
-  .heading,
-  .text-section h2 {
-    font-size: 20px;
+  .hero-image img {
+    max-width: 280px;
   }
 
-  .fifth-box h1 {
-    font-size: 20px;
+  .image-section img {
+    max-width: 90%;
+  }
+}
+
+/* Desktop screens (above 1200px) */
+@media (min-width: 1201px) {
+  .navbar {
+    padding: 20px 8%;
   }
 
-  .fifth-box p {
-    font-size: 14px;
+  .hero-text h1 {
+    font-size: 2.5rem;
   }
 
-  .arrow-fifth .arrow {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    font-size: 18px;
+  .hero-image img {
+    max-width: 300px;
+  }
+
+  .feature-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .form-row {
+    flex-direction: row;
   }
 }
